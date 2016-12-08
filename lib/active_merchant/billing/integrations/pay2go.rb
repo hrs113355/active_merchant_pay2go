@@ -18,11 +18,11 @@ module ActiveMerchant #:nodoc:
           mode = ActiveMerchant::Billing::Base.integration_mode
           case mode
             when :production
-              'https://api.pay2go.com/MPG/mpg_gateway'
+              'https://core.spgateway.com/MPG/mpg_gateway'
             when :development
-              'https://capi.pay2go.com/MPG/mpg_gateway'
+              'https://ccore.spgateway.com/MPG/mpg_gateway'
             when :test
-              'https://capi.pay2go.com/MPG/mpg_gateway'
+              'https://ccore.spgateway.com/MPG/mpg_gateway'
             else
               raise StandardError, "Integration mode set to an invalid value: #{mode}"
           end
